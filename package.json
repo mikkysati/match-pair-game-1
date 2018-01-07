@@ -2,6 +2,7 @@
   "name": "match-pair-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mikkysati.github.io/match-pair-game-1/",
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "3.3.7",
@@ -11,12 +12,14 @@
     "react-scripts": "1.0.17"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "node-sass-chokidar": "0.0.3",
     "source-map-explorer": "^1.5.0"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
     "build-css": "node-sass-chokidar src/ -o src/",
+    "deploy" : "npm run build&&gh-pages -d build",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
